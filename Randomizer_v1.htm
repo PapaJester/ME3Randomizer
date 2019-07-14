@@ -1,0 +1,247 @@
+
+<html>
+<head>
+<script language="Javascript">
+function getMap() {
+	var mapList = new Array();
+	mapList[0] = new Array('Firebase Dagger', 'fbDagger');
+	mapList[1] = new Array('Firebase Ghost', 'fbGhost');
+	mapList[2] = new Array('Firebase Giant', 'fbGiant');
+	mapList[3] = new Array('Firebase Glacier', 'fbGlacier');
+	mapList[4] = new Array('Firebase Reactor Hazard', 'fbReactorHaz');
+	mapList[5] = new Array('Firebase White', 'fbWhite');
+	mapList[6] = new Array('Firebase Condor', 'fbCondor');
+	mapList[7] = new Array('Firebase Hydra', 'fbHydra');
+	mapList[8] = new Array('Firebase Goddess', 'fbGoddess');
+	mapList[9] = new Array('Firebase Jade', 'fbJade');
+	mapList[10] = new Array('Firebase London', 'fbLondon');
+	mapList[11] = new Array('Firebase Rio', 'fbRio');
+	mapList[12] = new Array('Firebase Vancouver', 'fbVancouver');
+	mapList[13] = new Array('Firebase Ghost Hazard', 'fbGhostHaz');
+	mapList[14] = new Array('Firebase Giant Hazard', 'fbGiantHaz');
+	mapList[15] = new Array('Firebase Glacier Hazard', 'fbGlacierHaz');
+	mapList[16] = new Array('Firebase White Hazard', 'fbWhiteHaz');
+/*	*X*X*X		UNUSED MAPS		X*X*X*
+//	Standard Maps
+	mapList[xx] = new Array('Firebase Dagger Hazard', 'fbDaggerHaz');
+	mapList[xx] = new Array('Firebase Reactor', 'fbReactor');
+//	Original Maps
+	mapList[xx] = new Array('Original Firebase Glacier', 'fbGlacierOrig');
+	mapList[xx] = new Array('Original Firebase White', 'fbWhiteOrig');
+//	Redemption Maps
+	mapList[17] = new Array('Armax: Blasteroid', 'arBlasteroid');
+	mapList[18] = new Array('Armax: Brimstone', 'arBrimstone');
+	mapList[19] = new Array('Armax: Classic', 'arClassic');
+	mapList[20] = new Array('Armax: Fatal Error', 'arFatalError');
+	mapList[21] = new Array('Armax: Pain Train', 'arPainTrain');
+	mapList[22] = new Array('Armax: Prime Evil', 'arPrimeEvil');
+	mapList[23] = new Array('Armax: Spin Zone', 'arSpinZone');
+	mapList[24] = new Array('Armax: Wingman', 'arWingman');
+	mapList[25] = new Array('Firebase Archives', 'fbArchives');
+	mapList[26] = new Array('Firebase Atrium', 'fbAtrium');
+	mapList[27] = new Array('Firebase Invasion', 'fbInvasion');
+	mapList[28] = new Array('Firebase Keelah', 'fbKeelah');
+	mapList[29] = new Array('Firebase Refuge', 'fbRefuge');
+	mapList[30] = new Array('Firebase Sanctuary', 'fbSanctuary');
+	mapList[31] = new Array('Firebase Shipwreck', 'fbShipwreck');
+	mapList[32] = new Array('Firebase Trinity', 'fbTrinity');
+	mapList[33] = new Array('Fall of Vancouver', 'xFallVancouver');
+*/
+	var randomIndex = Math.floor(Math.random() * mapList.length);
+//	document.write(mapList[randomIndex][0]);
+	document.write("<br><br><img src=resources/maps/");
+	document.write(mapList[randomIndex][1]);
+	document.write(".png height=120 width=480>");
+}
+
+function getEnemy(){
+	var enemyList = ['Cerberus', 'Geth', 'Reapers', 'Collectors'];
+/*	*X*X*X		UNUSED ENEMIES		X*X*X*
+	enemyList[4] = 'Rejects';
+*/
+	var randomIndex = Math.floor(Math.random() * enemyList.length);
+	document.write("<img src=resources/enemies/");
+	document.write(enemyList[randomIndex]);
+	document.write(".png height=120 width=480><br>");
+}
+
+function getToon() {
+/*	Doesn't have separate entries for Female/Male vanilla Humans	*/
+	var toonList = new Array();
+	toonList[0] = new Array('Human Adept', 'HumanMaleAdept');
+	toonList[1] = new Array('Drell Adept', 'DrellAdept');
+	toonList[2] = new Array('Asari Adept', 'AsariAdept');
+	toonList[3] = new Array('Asari Justicar', 'JusticarAdept');
+	toonList[4] = new Array('Ex-Cerberus Adept', 'PhoenixAdept');
+	toonList[5] = new Array('N7 Fury', 'FuryAdept');
+	toonList[6] = new Array('Volus Adept', 'VolusAdept');
+	toonList[7] = new Array('Krogan Adept', 'KroganAdept');
+	toonList[8] = new Array('Batarian Adept', 'BatarianAdept');
+	toonList[9] = new Array('Awakened Collector Adept', 'CollectorAdept');
+	toonList[10] = new Array('Human Soldier', 'HumanFemSol');
+	toonList[11] = new Array('Krogan Soldier', 'KroganSol');
+	toonList[12] = new Array('Turian Soldier', 'TurianSol');
+	toonList[13] = new Array('Battlefield 3 Soldier', 'BF3Sol');
+	toonList[14] = new Array('Batarian Soldier', 'BatarianSol');
+	toonList[15] = new Array('Vorcha Soldier', 'VorchaSol');
+	toonList[16] = new Array('N7 Destroyer', 'DestroyerSol');
+	toonList[17] = new Array('Turian Havoc', 'HavocSol');
+	toonList[18] = new Array('Geth Trooper', 'TrooperSol');
+	toonList[19] = new Array('Quarian Marksman', 'MarksmanSol');
+	toonList[20] = new Array('Geth Juggernaut', 'JuggernautSol');
+	toonList[21] = new Array('Human Engineer', 'HumanMaleEngi');
+	toonList[22] = new Array('Quarian Female Enigneer', 'QuarianFemEngi');
+	toonList[23] = new Array('Salarian Engineer', 'SalarianEngi');
+	toonList[24] = new Array('Geth Engineer', 'GethEngi');
+	toonList[25] = new Array('Quarian Male Engineer', 'QuarianMaleEngi');
+	toonList[26] = new Array('N7 Demolisher', 'DemolisherEngi');
+	toonList[27] = new Array('Volus Engineer', 'VolusEngi');
+	toonList[28] = new Array('Turian Saboteur', 'SaboteurEngi');
+	toonList[29] = new Array('Vorcha Hunter', 'HunterEngi');
+	toonList[30] = new Array('Human Sentinel', 'HumanFemSent');
+	toonList[31] = new Array('Turian Sentinel', 'TurianSent');
+	toonList[32] = new Array('Krogan Sentinel', 'KroganSent');
+	toonList[33] = new Array('Batarian Sentinel', 'BatarianSent');
+	toonList[34] = new Array('Vorcha Sentinel', 'VorchaSent');
+	toonList[35] = new Array('N7 Paladin', 'PaladinSent');
+	toonList[36] = new Array('Volus Mercenary', 'MercenarySent');
+	toonList[37] = new Array('Asari Valkyire', 'ValkyrieSent');
+	toonList[38] = new Array('Krogan Warlord', 'WarlordSent');
+	toonList[39] = new Array('Human Infiltrator', 'HumanMaleInfi');
+	toonList[40] = new Array('Salarian Infiltrator', 'SalarianInfi');
+	toonList[41] = new Array('Quarian Female Infiltrator', 'QuarianFemInfi');
+	toonList[42] = new Array('Geth Infiltrator', 'GethInfi');
+	toonList[43] = new Array('Quarian Male Infiltrator', 'QuarianMaleInfi');
+	toonList[44] = new Array('N7 Shadow', 'ShadowInfi');
+	toonList[45] = new Array('Turian Ghost', 'GhostInfi');
+	toonList[46] = new Array('Drell Assassin', 'AssassinInfi');
+	toonList[47] = new Array('Asari Huntress', 'HuntressInfi');
+	toonList[48] = new Array('Alliance Infiltration Unit', 'SexbotInfi');
+	toonList[49] = new Array('Human Vanguard', 'HumanFemVan');
+	toonList[50] = new Array('Drell Vanguard', 'DrellVan');
+	toonList[51] = new Array('Asari Vanguard', 'AsariVan');
+	toonList[52] = new Array('Krogan Vanguard', 'KroganVan');
+	toonList[53] = new Array('Ex-Cerberus Vanguard', 'PhoenixVan');
+	toonList[54] = new Array('N7 Slayer', 'SlayerVan');
+	toonList[55] = new Array('Volus Protector', 'VolusVan');
+	toonList[56] = new Array('Batarian Brawler', 'BrawlerVan');
+	toonList[57] = new Array('Turian Cabal', 'CabalVan');
+/*	*X*X*X		UNUSED CHARACTERS		X*X*X*
+	toonList[xx] = new Array('Talon Mercenary', 'TalonEngi');
+*/
+	var randomIndex = Math.floor(Math.random() * toonList.length);
+	document.write(toonList[randomIndex][0]);
+	document.write("<br><img src=resources/classes/");
+	document.write(toonList[randomIndex][1]);
+	document.write(".png");
+}
+
+function getWeaponType(){
+	var weapType = ['Sniper Rifles', 'Assault Rifles', 'SMGs', 'Shotguns', 'Heavy Pistols'];
+	var weapPic = ['Snipers', 'ARs', 'SMGs', 'Shotguns', 'Pistols'];
+	var randomIndex = Math.floor(Math.random() * weapType.length);
+//	document.write("<td width=50%><font size=1><center>");
+	document.write("<br><tr><center>");
+	document.write(weapType[randomIndex]);
+	document.write("</center></tr><center><img src=resources/weapons/");
+	document.write(weapPic[randomIndex]);
+	document.write(".png></center>");
+}
+
+</script>
+<link rel="stylesheet" type="text/css" href="resources/randomize.css" />
+</head>
+<body>
+<font color=#FFFFFF><b>
+<center>
+	<div class="backfront">
+		<div class="randomized">
+			<table width=100%>
+				<tr>
+				<td>
+					<p align="center"><button type="button" onClick="window.location.reload()">Generate Game</p>
+				</td>
+			</tr>
+			</table>
+		</div>
+	</div>
+		<div class="randomized">
+			<div class="name_map">
+				<script type=text/javascript>getMap();</script>
+			</div>
+		</div>
+		<br>
+		<div class="randomized">
+			<div class="name_ennemy">
+				<script type=text/javascript>getEnemy();</script>
+			</div>
+		</div>
+<hr/>
+<div class="randomized">
+	<div class="character">
+		<table width=100%>
+			<tr>
+				<td>
+					<div class="char_container">
+					<center><script language="Javascript">getToon();</script>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td><table width=100%><tr><script language="Javascript">getWeaponType();</script></tr></table></td>
+			</tr>
+		</table>
+	</div>
+	<div class="character">
+		<table width=100%>
+			<tr>
+				<td>
+					<div class="char_container">
+					<center><script language="Javascript">getToon();</script>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td><table width=100%><tr><script language="Javascript">getWeaponType();</script></tr></table></td>
+			</tr>
+		</table>
+	</div>
+	<div class="character">
+		<table width=100%>
+			<tr>
+				<td>
+					<div class="char_container">
+					<center><script language="Javascript">getToon();</script>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td><table width=100%><tr><script language="Javascript">getWeaponType();</script></tr></table></td>
+			</tr>
+		</table>
+	</div>
+	<div class="character">
+		<table width=100%>
+			<tr>
+				<td>
+					<div class="char_container">
+					<center><script language="Javascript">getToon();</script>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td><table width=100%><tr><script language="Javascript">getWeaponType();</script></tr></table></td>
+			</tr>
+		</table>
+	</div>
+</div>
+</font>
+</div>
+</center>
+  <div class="row">
+    <div class="col-sm-12 col-xs-12 text-center" style="padding-top:20px;">
+      <center>Modified from ds108j's ME3 Multiplayer Randomizer</center><br>
+    </div>
+  </div>
+  </body>
+</html>

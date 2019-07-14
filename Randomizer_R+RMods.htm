@@ -146,11 +146,33 @@ function getWeaponType(){
 	document.write(".png></center>");
 }
 
+function wildcardBitches(){
+	var intWildCard = Math.floor(Math.random() * 59);
+	if (intWildCard < 3){
+	document.write("<div class='backfront'><table width=100%><tr><p align='center'><img src='resources/wildcard.gif' width=200></p><br></tr>");
+		switch (intWildCard){
+			case 0:
+				document.write("<td width=50%>Wildcard #1: Professional Courtesy</td>");
+				document.write("<td width=50%><p align='right'>All Players can choose any character of the same <i><u><b>class</i></u></b> as their assigned character.</p></td>");
+				break;
+			case 1:
+				document.write("<td width=50%>Wildcard #2: My cousin can do it better</td>");
+				document.write("<td width=50%><p align='right'>All Players can choose any character of the same <i><u><b>species</i></u></b> as their assigned character.</p></td>");
+				break;
+			case 2:
+				document.write("<td width=50%>Wildcard #3: It's a family heirloom...</td>");
+				document.write("<td width=50%><p align='right'>All Players are allowed to choose a weapon created by their Characters species, regardless of Weapon Type. If any Players choose not to exercise this option, or their species does not have any available weapons, they are still bound by their assigned Weapon Type.</p></td>");
+				break;
+		}
+		document.write("</tr></table><br></div><hr/>");
+	}
+}
+
 </script>
 <link rel="stylesheet" type="text/css" href="resources/randomize.css" />
 </head>
 <body>
-<font color=#FFFFFF><b>
+<font color=#FFFFFF><b><script type=text/javascript>wildcardBitches();</script>
 <center>
 	<div class="backfront">
 		<div class="randomized">
@@ -236,5 +258,18 @@ function getWeaponType(){
 </font>
 </div>
 </center>
-</body>
+  <div class="row">
+    <div class="col-sm-12 col-xs-12 text-center" style="padding-top:20px;">
+      <center>Modified from ds108j's ME3 Multiplayer Randomizer</center><br>
+    </div>
+  </div>
+			<table width=100%>
+				<tr>
+				<td>
+					<center><br><b><a href="index.html">Back to Main</a><br><br>
+					</center>
+				</td>
+			</tr>
+			</table>
+  </body>
 </html>

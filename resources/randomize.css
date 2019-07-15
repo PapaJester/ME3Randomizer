@@ -4,10 +4,15 @@ html, body {
   font-size: 10pt;
   font-family: "Trebuchet MS", tahoma, arial, serif;
   color: white;
+
 }
 
 body {
   background: black url("bg.jpg") top center no-repeat;
+}
+
+a {
+	color: red;
 }
 
 #wrapper {

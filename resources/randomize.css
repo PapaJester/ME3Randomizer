@@ -39,6 +39,11 @@ a {
     width: 98%;
 }
 
+.backfront_hidden {
+    width: 98%;
+	display: none;
+}
+
 .randomized {
   margin: 0 auto;
   background-color: #0c131c;
@@ -47,6 +52,16 @@ a {
   border-color: #454545;
   padding: 8px;
   display: inline-block;
+}
+
+.initialNoShow {
+  margin: 0 auto;
+  background-color: #0c131c;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #454545;
+  padding: 8px;
+  display: none;
 }
 
 .name_map {
@@ -60,7 +75,7 @@ a {
   background: url("main_map.png") no-repeat top center;
 }
 
-.name_ennemy {
+.name_enemy {
   margin: 0 auto;
   width: 500px;
 }

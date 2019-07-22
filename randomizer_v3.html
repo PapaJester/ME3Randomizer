@@ -1,0 +1,306 @@
+<html>
+<head>
+<script language="Javascript">
+
+function showDivs(){
+document.getElementById("divMap").style.display = 'inline-block';
+document.getElementById("divEnemy").style.display = 'inline-block';
+document.getElementById("divToons").style.display = 'inline-block';
+}
+
+function getMap(blnRedemption, blnOriginalMaps, blnStupidMaps, txtCurrentMap){
+	var mapList = new Array();
+	mapList.push('fbDagger', 'fbGhost', 'fbGiant', 'fbGlacier', 'fbWhite');
+	mapList.push('fbJade', 'fbLondon', 'fbRio', 'fbVancouver', 'fbCondor', 'fbHydra', 'fbGoddess');
+	mapList.push('fbReactorHaz', 'fbGhostHaz', 'fbGiantHaz', 'fbGlacierHaz', 'fbWhiteHaz');
+//	Redemption Maps
+	if (blnRedemption) {
+		mapList.push('arBlasteroid', 'arBrimstone', 'arClassic', 'arFatalError', 'arPainTrain', 'arPrimeEvil', 'arSpinZone', 'arWingman');
+		mapList.push('fbArchives', 'fbAtrium', 'fbInvasion', 'fbKeelah', 'fbRefuge', 'fbSanctuary', 'fbShipwreck', 'fbTrinity', 'xFallVancouver');
+	}
+//	Original Maps
+	if (blnOriginalMaps) {
+		mapList.push('fbGlacierOrig', 'fbWhiteOrig');
+	}
+//	Standard Maps
+	if(blnStupidMaps) {
+		mapList.push('fbDaggerHaz', 'fbReactor');
+	}
+	var randomIndex = Math.floor(Math.random() * mapList.length);
+	while (mapList[randomIndex] == txtCurrentMap){randomIndex = Math.floor(Math.random() * mapList.length);}
+	return mapList[randomIndex];
+}
+
+function getToon(blnTalon, strCurrentToon) {
+/*	Doesn't have separate entries for Female/Male vanilla Humans	*/
+	var toonList = new Array();
+	toonList[0] = new Array('Human Adept', 'HumanMaleAdept');
+	toonList[1] = new Array('Drell Adept', 'DrellAdept');
+	toonList[2] = new Array('Asari Adept', 'AsariAdept');
+	toonList[3] = new Array('Asari Justicar', 'JusticarAdept');
+	toonList[4] = new Array('Ex-Cerberus Adept', 'PhoenixAdept');
+	toonList[5] = new Array('N7 Fury', 'FuryAdept');
+	toonList[6] = new Array('Volus Adept', 'VolusAdept');
+	toonList[7] = new Array('Krogan Adept', 'KroganAdept');
+	toonList[8] = new Array('Batarian Adept', 'BatarianAdept');
+	toonList[9] = new Array('Awakened Collector Adept', 'CollectorAdept');
+	toonList[10] = new Array('Human Soldier', 'HumanFemSol');
+	toonList[11] = new Array('Krogan Soldier', 'KroganSol');
+	toonList[12] = new Array('Turian Soldier', 'TurianSol');
+	toonList[13] = new Array('Battlefield 3 Soldier', 'BF3Sol');
+	toonList[14] = new Array('Batarian Soldier', 'BatarianSol');
+	toonList[15] = new Array('Vorcha Soldier', 'VorchaSol');
+	toonList[16] = new Array('N7 Destroyer', 'DestroyerSol');
+	toonList[17] = new Array('Turian Havoc', 'HavocSol');
+	toonList[18] = new Array('Geth Trooper', 'TrooperSol');
+	toonList[19] = new Array('Quarian Marksman', 'MarksmanSol');
+	toonList[20] = new Array('Geth Juggernaut', 'JuggernautSol');
+	toonList[21] = new Array('Human Engineer', 'HumanMaleEngi');
+	toonList[22] = new Array('Quarian Female Enigneer', 'QuarianFemEngi');
+	toonList[23] = new Array('Salarian Engineer', 'SalarianEngi');
+	toonList[24] = new Array('Geth Engineer', 'GethEngi');
+	toonList[25] = new Array('Quarian Male Engineer', 'QuarianMaleEngi');
+	toonList[26] = new Array('N7 Demolisher', 'DemolisherEngi');
+	toonList[27] = new Array('Volus Engineer', 'VolusEngi');
+	toonList[28] = new Array('Turian Saboteur', 'SaboteurEngi');
+	toonList[29] = new Array('Vorcha Hunter', 'HunterEngi');
+	toonList[30] = new Array('Human Sentinel', 'HumanFemSent');
+	toonList[31] = new Array('Turian Sentinel', 'TurianSent');
+	toonList[32] = new Array('Krogan Sentinel', 'KroganSent');
+	toonList[33] = new Array('Batarian Sentinel', 'BatarianSent');
+	toonList[34] = new Array('Vorcha Sentinel', 'VorchaSent');
+	toonList[35] = new Array('N7 Paladin', 'PaladinSent');
+	toonList[36] = new Array('Volus Mercenary', 'MercenarySent');
+	toonList[37] = new Array('Asari Valkyire', 'ValkyrieSent');
+	toonList[38] = new Array('Krogan Warlord', 'WarlordSent');
+	toonList[39] = new Array('Human Infiltrator', 'HumanMaleInfi');
+	toonList[40] = new Array('Salarian Infiltrator', 'SalarianInfi');
+	toonList[41] = new Array('Quarian Female Infiltrator', 'QuarianFemInfi');
+	toonList[42] = new Array('Geth Infiltrator', 'GethInfi');
+	toonList[43] = new Array('Quarian Male Infiltrator', 'QuarianMaleInfi');
+	toonList[44] = new Array('N7 Shadow', 'ShadowInfi');
+	toonList[45] = new Array('Turian Ghost', 'GhostInfi');
+	toonList[46] = new Array('Drell Assassin', 'AssassinInfi');
+	toonList[47] = new Array('Asari Huntress', 'HuntressInfi');
+	toonList[48] = new Array('Alliance Infiltration Unit', 'SexbotInfi');
+	toonList[49] = new Array('Human Vanguard', 'HumanFemVan');
+	toonList[50] = new Array('Drell Vanguard', 'DrellVan');
+	toonList[51] = new Array('Asari Vanguard', 'AsariVan');
+	toonList[52] = new Array('Krogan Vanguard', 'KroganVan');
+	toonList[53] = new Array('Ex-Cerberus Vanguard', 'PhoenixVan');
+	toonList[54] = new Array('N7 Slayer', 'SlayerVan');
+	toonList[55] = new Array('Volus Protector', 'VolusVan');
+	toonList[56] = new Array('Batarian Brawler', 'BrawlerVan');
+	toonList[57] = new Array('Turian Cabal', 'CabalVan');
+	if (blnTalon){toonList[58] = new Array("Talon Mercenary", "TalonEngi");}
+	var randomIndex = Math.floor(Math.random() * toonList.length);
+	while (toonList[randomIndex][1] == strCurrentToon){randomIndex = Math.floor(Math.random() * toonList.length);}
+	return toonList[randomIndex];
+}
+
+function getEnemy(blnRejects, txtCurrentEnemy){
+	var enemyList = ['Cerberus', 'Geth', 'Reapers', 'Collectors'];
+	if (blnRejects){enemyList.push("Rejects");}
+	var randomIndex = Math.floor(Math.random() * enemyList.length);
+	while (enemyList[randomIndex] == txtCurrentEnemy){randomIndex = Math.floor(Math.random() * enemyList.length);}
+	return enemyList[randomIndex];
+}
+
+function getWeapon(){
+	var weapType = new Array();
+	weapType[0] = new Array('Sniper Rifles', 'Snipers');
+	weapType[1] = new Array('Assault Rifles', 'ARs');
+	weapType[2] = new Array('SMGs', 'SMGs');
+	weapType[3] = new Array('Shotguns', 'Shotguns');
+	weapType[4] = new Array('Heavy Pistols', 'Pistols');
+	var randomIndex = Math.floor(Math.random() * weapType.length);
+	return weapType[randomIndex];
+}
+
+function getWildcard(intOddsPerCard){
+	var wildcards = new Array();
+	wildcards[0] = new Array("Wildcard #1: Professional Courtesy", "All Players can choose any character of the same <i><u><b>class</i></u></b> as their assigned character.");
+	wildcards[1] = new Array("Wildcard #2: My cousin can do it better", "All Players can choose any character of the same <i><u><b>species</i></u></b> as their assigned character.");
+	wildcards[2] = new Array("Wildcard #3: It's a family heirloom...", "All Players are allowed to choose a weapon created by their Characters species, regardless of Weapon Type. If any Players choose not to exercise this option, or their species does not have any available weapons, they are still bound by their assigned Weapon Type.");
+	
+	var intCards = (wildcards.length + 1);
+	var wcResults = new Array();
+	var i, j;
+	for (i = 0; i < intCards; i++){
+		for (j = 0; j < intOddsPerCard; j++){
+			wcResults.push(wildcards[i]);
+		}
+	}
+	
+	var intWildCard = Math.floor(Math.random() * 99);
+	if (intWildCard <= wcResults.length){
+		return wcResults[intWildCard];
+	}else{
+		return 0;
+	}
+}
+
+function getNewMap(){
+	var imgMap = document.getElementById("mapPic");
+	var newMap = getMap(document.getElementById("chkRedemption").checked, document.getElementById("chkOriginal").checked, document.getElementById("chkStupid").checked, imgMap.alt);
+	imgMap.src = "resources/maps/" + newMap + ".png";
+	imgMap.alt = newMap;
+}
+
+function getNewEnemy(){
+	var imgEnemy = document.getElementById("enemyPic");
+	var newEnemy = getEnemy(document.getElementById("chkRejects").checked, imgEnemy.alt);
+	imgEnemy.src = "resources/enemies/" + newEnemy + ".png";
+	imgEnemy.alt = newEnemy;
+}
+
+function rollKit(intIndex){
+	var newToon = getToon(document.getElementById("chkTalon").checked, document.getElementById("toonPic_" + intIndex).alt);
+	document.getElementById("player_" + intIndex).innerHTML = newToon[0];
+	document.getElementById("toonPic_" + intIndex).src = "resources/classes/" + newToon[1] + ".png";
+	document.getElementById("toonPic_" + intIndex).alt = newToon[1];
+	var newWeap = getWeapon();
+	document.getElementById("weapon_" + intIndex).innerHTML = newWeap[0];
+	document.getElementById("weaponPic_" + intIndex).src = "resources/weapons/" + newWeap[1] + ".png";
+}
+
+function createNewMatch(){
+	getNewMap();
+	getNewEnemy();
+	var i;
+	for (i = 0; i < 4; i++){
+		rollKit(i);
+	}
+	var showWildcard = getWildcard(4);
+	if (showWildcard != 0){
+		document.getElementById("wcName").innerHTML = showWildcard[0];
+		document.getElementById("wcDesc").innerHTML = showWildcard[1];
+		document.getElementById("wcDiv").style.display = "inline-block";
+	}else{
+		document.getElementById("wcDiv").style.display = "none";
+		document.getElementById("wcName").innerHTML = "";
+		document.getElementById("wcDesc").innerHTML = "";
+	}
+	showDivs();
+}
+</script>
+<link rel="stylesheet" type="text/css" href="resources/randomize.css" />
+</head>
+<body>
+<center>
+<div class="randomized" id="divOptions">
+	<div class="name_map">
+		<table>
+		<center><font size=24><p id="pOptions"><u>OPTIONS</u></p></font></center>
+		<tr width=100%><td width=40% align=left>
+			<input type="checkbox" id="chkRedemption"><label for="chkRedemption">Redemption</label><br>
+			<input type="checkbox" id="chkOriginal"><label for="chkOriginal">Original Maps</label><br>
+			<input type="checkbox" id="chkStupid"><label for="chkStupid">Stupid Maps</label><br>
+		</td><td width=20%></td><td width=40% align=right>
+			<label for="chkRejects">Rejects</label><input type="checkbox" id="chkRejects"><br>
+			<label for="chkWildcards">Enable Wild Cards</label><input type="checkbox" id="chkWildcards"><br>
+			<label for="chkTalon">Talon Mercenary</label><input type="checkbox" id="chkTalon"><br>
+		</td></tr>
+		</table>
+	</div>
+</div>
+<br>
+<div class="backfront_hidden" id="wcDiv">
+	<table width=100%>
+		<tr><p align="center"><img src="resources/wildcard.gif" width=200></p><br></tr><tr>
+				<td width=50%><p align="left" id="wcName"></p></td>
+				<td width=50%><p align='right' id="wcDesc"></p></td>
+		</tr>
+	</table><br>
+</div><hr/>
+<font color=#FFFFFF><b><script type=text/javascript>wildcardBitches();</script>
+	<div class="backfront">
+		<div class="randomized">
+			<table width=100%>
+				<tr>
+				<td>
+					<p align="center"><button type="button" id='btnMain' onClick=createNewMatch();>Generate Game</button></p>
+				</td>
+			</tr>
+			</table>
+		</div>
+	</div>
+		<div class="initialNoShow" id="divMap">
+			<div class="name_map">
+				<img src="" height=120 width=480 id="mapPic" onclick=getNewMap(); alt="x">
+			</div>
+		</div>
+		
+		<div class="initialNoShow" id="divEnemy">
+			<div class="name_enemy">
+				<img id='enemyPic' src="" height=120 width=480 alt="x" onclick=getNewEnemy();>
+			</div>
+		</div>
+<hr/>
+<div class="initialNoShow" id="divToons">
+	<div class="character">
+		<table width=100%>
+			<tr>
+				<td>
+					<div class="char_container">
+					<center><p id="player_0"></p><br><img id="toonPic_0" src="" alt="x" onclick=rollKit(0);>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td><table width=100%><tr><br><tr><center><p id="weapon_0"></p></center></tr><center><img id="weaponPic_0" src=""></center></tr></table></td>
+			</tr>
+		</table>
+	</div>
+	<div class="character">
+		<table width=100%>
+			<tr>
+				<td>
+					<div class="char_container">
+					<center><p id="player_1"></p><br><img id="toonPic_1" src="" alt="x" onclick=rollKit(1);>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td><table width=100%><tr><br><tr><center><p id="weapon_1"></p></center></tr><center><img id="weaponPic_1" src=""></center></tr></table></td>
+			</tr>
+		</table>
+	</div>
+	<div class="character">
+		<table width=100%>
+			<tr>
+				<td>
+					<div class="char_container">
+					<center><p id="player_2"></p><br><img id="toonPic_2" src="" alt="x" onclick=rollKit(2);>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td><table width=100%><tr><br><tr><center><p id="weapon_2"></p></center></tr><center><img id="weaponPic_2" src=""></center></tr></table></td>
+			</tr>
+		</table>
+	</div>
+	<div class="character" id="testSubject">
+		<table width=100%>
+			<tr>
+				<td>
+					<div class="char_container">
+					<center><p id="player_3"></p><br><img id="toonPic_3" src="" alt="x" onclick=rollKit(3);>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td><table width=100%><tr><br><tr><center><p id="weapon_3"></p></center></tr><center><img id="weaponPic_3" src=""></center></tr></table></td>
+			</tr>
+		</table>
+	</div>
+</div>
+</font>
+</center>
+  <div class="row">
+    <div class="col-sm-12 col-xs-12 text-center" style="padding-top:20px;">
+      <center>Modified from ds108j's ME3 Multiplayer Randomizer</center><br>
+    </div>
+  </div>
+  </body>
+</html>

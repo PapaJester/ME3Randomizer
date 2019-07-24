@@ -171,8 +171,9 @@ function createNewMatch(){
 	for (i = 0; i < 4; i++){
 		rollKit(i);
 	}
+	
 	var showWildcard = getWildcard(4);
-	if (showWildcard != 0){
+	if (showWildcard != 0 && document.getElementById("chkWildcards").checked){
 		document.getElementById("wcName").innerHTML = showWildcard[0];
 		document.getElementById("wcDesc").innerHTML = showWildcard[1];
 		document.getElementById("wcDiv").style.display = "inline-block";
@@ -302,13 +303,13 @@ function createNewMatch(){
       <center>Modified from ds108j's ME3 Multiplayer Randomizer</center><br>
     </div>
   </div>
-			<table width=100%>
-				<tr>
+		<table width=100%>
+			<tr>
 				<td>
 					<center><br><b><a href="index.html">Back to Main</a><br><br>
 					</center>
 				</td>
-				</tr>
-			</table>
-</body>
+			</tr>
+		</table>
+  </body>
 </html>

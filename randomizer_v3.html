@@ -122,7 +122,7 @@ function getWildcard(intOddsPerCard){
 	wildcards[0] = new Array("Wildcard #1: Professional Courtesy", "All Players can choose any character of the same <i><u><b>class</i></u></b> as their assigned character.");
 	wildcards[1] = new Array("Wildcard #2: My cousin can do it better", "All Players can choose any character of the same <i><u><b>species</i></u></b> as their assigned character.");
 	wildcards[2] = new Array("Wildcard #3: It's a family heirloom...", "All Players are allowed to choose a weapon created by their Characters species, regardless of Weapon Type. If any Players choose not to exercise this option, or their species does not have any available weapons, they are still bound by their assigned Weapon Type.");
-	
+		wildcards[2][1] = wildcards[2][1] + "<br><a href='me3_faction_weapons.html' target='_blank'>List of available weapons</a>"
 	var intCards = (wildcards.length + 1);
 	var wcResults = new Array();
 	var i, j;

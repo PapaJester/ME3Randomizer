@@ -22,6 +22,37 @@ a {
 	color: red;
 }
 
+.subtable table {
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.subtable td {
+	border: 1px solid black;
+	text-align: left;
+	vertical-align: top;
+	font-size: 9pt;
+}
+
+.subtable th {
+	border: 1px solid black;
+	text-align: left;
+	vertical-align: top;
+	font-size: 10pt;
+}
+
+.subtable {
+  margin: 0 auto;
+  background-color: #0c131c;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #454545;
+  padding: 8px;
+  display: inline-block;
+  width: 90%;
+}
+
 #wrapper {
   border-width: 10px 1px 1px 1px;
   border-style: solid;
@@ -42,6 +73,10 @@ a {
 .backfront_hidden {
     width: 98%;
 	display: none;
+}
+
+.fine_print {
+	font-size: 8pt;
 }
 
 .randomized {
